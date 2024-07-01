@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
+:root {
+    --cor-principal: #F3F8FF;
+    --cor-secundaria: #9e1bd2;
+    --cor-botao: #1f1e20;
+    --cor-de-fundo: #000000;
+    --cor-texto-alternativo: #ff00ff;
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: "Bevan", serif;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-principal);
+
+
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    padding: -0px;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-fundo);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70%;
+    opacity: 85%;
+}
+
+.cabecalho > * {
+    position: relative; /* Garante que o conteúdo fique acima do pseudo-elemento */
+    z-index: 1;
+}
+
+.cabecalho__logo {
+    width: 12%;   
+    margin-left: 5%;
+}
+
+.cabecalho__botao {
+    border-radius: 3px;
+    padding: 1% 2% 1% 2%;
+    font-size: 1em;
+    color: var(--cor-principal);
+    background-color: var(--cor-texto-alternativo);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cabecalho__botao:hover{
+    opacity: 50%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.background {
+    margin: -10% 0% 100% 0%;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    opacity: 50%;
+    z-index: -1;
+    width: 100%;
+
+}
+
+
+.container__caixa {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.container__caixa__titulo {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--cor-principal);
+    font-family: var(--fonte-secundaria);
+    margin: 10% 0 0% 0;
+    font-weight: lighter;
+}
+
+.container__caixa__paragrafo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: -10px 0 -20px 0;
+}
+
+.container__caixa__aviso {
+    margin: -50px 0 -100px 0;
+}
+
+
+input {
+    margin-bottom: 20px;
+    width: 30%;
+    height: 40px;
+    font-size: 1rem;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-principal);
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+    opacity: 70%;
+}
+
+input:hover{
+    border: var(--cor-principal) solid;
+    border-radius: 5px;
+}
+
+
+
+.container__caixa__email__botao{
+    padding: 1% 2% 1% 2%;
+    background-color: var(--cor-texto-alternativo);
+    text-decoration: none;
+    color: var(--cor-de-fundo);
+    font-size: 20px;
+    margin-left: 2%;
+}
+
+.container__caixa__email__botao:hover {
+    opacity: 50%;
+    
+}
+
+.linha-divisoria {
+    border: none;
+    padding: 0.5%;
+    background-color: var(--cor-botao); /* Cor da linha e opacidade */
+}
+
+.secundario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0%;
+}
+
+.secundario__descricao__titulo {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: var(--fonte-secundaria);
+}
+
+.secundario__descricao__paragrafo {
+    padding: 0% 11% 0% 0%;
+    font-size: 30px;
+    font-family: var(--fonte-principal);
+}
+
+.secundario__imagem {
+    width: 50%;
+}
+
+
+.terciario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+    padding: 0% 0% 0% 11%;
+}
+
+.terciario__descricao__titulo {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: var(--fonte-secundaria);
+}
+
+.terciario__descricao__paragrafo {
+    padding: 0% 0% 0% 0%;
+    font-size: 30px;
+    font-family: var(--fonte-principal);
+}
+
+.terciario__imagem {
+    width: 50%;
+}
+
+
+.quaternario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0%;
+}
+
+.quaternario__descricao__titulo {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: var(--fonte-secundaria);
+}
+
+.quaternario__descricao__paragrafo {
+    padding: 0% 11% 0% 0%;
+    font-size: 30px;
+    font-family: var(--fonte-principal);
+}
+
+.quaternario__imagem {
+    width: 40rem;
+}
+
+.rodape {
+    margin-top: 50px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+
+.rodape__paragrafo {
+    font-family: var(--fonte-principal);
+    font-size: 1.5em;
+    text-align: center;
+    align-items: center;
+}
+
+.rodape__direitos {
+    font-family: var(--fonte-principal);
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+}
