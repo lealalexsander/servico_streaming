@@ -44,7 +44,7 @@ body {
 }
 
 .cabecalho__logo {
-    width: 12%;   
+    width: 10%;   
     margin-left: 5%;
 }
 
@@ -90,7 +90,7 @@ body {
 }
 
 .container__caixa__titulo {
-    font-size: 35px;
+    font-size: 2rem;
     text-transform: uppercase;
     color: var(--cor-principal);
     font-family: var(--fonte-secundaria);
@@ -99,33 +99,55 @@ body {
 }
 
 .container__caixa__paragrafo {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: bold;
     margin: -10px 0 -20px 0;
 }
 
 .container__caixa__aviso {
+    font-size: 1rem;
     margin: -50px 0 -100px 0;
 }
 
-
 input {
-    margin-bottom: 20px;
-    width: 30%;
-    height: 40px;
-    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    width: 70%;
+    height: 4rem;
+    font-size: 0.5px;
     background-color: var(--cor-de-fundo);
+    color: var(--cor-texto-alternativo);
+    font-family: var(--fonte-principal);
+    opacity: 90%;
+    padding-left: 3%;
+    transition: 1s ease;
+    
+}
+
+.labelemail {
+    position: absolute;
+    transform: translate(-890px, 20px);
+    font-size: 1.5rem;
+    pointer-events: none;
+    transition: 1s ease;
+}
+
+input:focus,
+input:valid {
     color: var(--cor-principal);
-    font-family: var(--fonte-secundaria);
-    font-weight: bold;
-    opacity: 70%;
+    border: 5px solid rgb(0, 255, 0);
+    font-size: 1.2rem;
+    
 }
 
-input:hover{
-    border: var(--cor-principal) solid;
-    border-radius: 5px;
-}
+input:focus +.labelemail,
+input:valid +.labelemail {
+    z-index: 1111;
+    transform: translate(-920px, 10px);
+    padding: 0 12px;
+    font-size: 0.8rem;
+    opacity: 40%;
 
+}
 
 
 .container__caixa__email__botao{
@@ -183,14 +205,14 @@ input:hover{
 
 .terciario__descricao__titulo {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 2.2rem;
     margin-bottom: 10px;
     font-family: var(--fonte-secundaria);
 }
 
 .terciario__descricao__paragrafo {
     padding: 0% 0% 0% 0%;
-    font-size: 30px;
+    font-size: 2rem;
     font-family: var(--fonte-principal);
 }
 
@@ -203,24 +225,24 @@ input:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0%;
+    gap: 15%;
 }
 
 .quaternario__descricao__titulo {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-bottom: 10px;
     font-family: var(--fonte-secundaria);
 }
 
 .quaternario__descricao__paragrafo {
-    padding: 0% 11% 0% 0%;
-    font-size: 30px;
+    font-size: 2rem;
     font-family: var(--fonte-principal);
 }
 
 .quaternario__imagem {
-    width: 40rem;
+    width: 15rem;
+    padding: 0 0 0 15%;
 }
 
 .rodape {
@@ -244,4 +266,146 @@ input:hover{
     font-size: 1em;
     text-align: center;
     align-items: center;
+}
+
+
+@media (max-width: 1000px) {
+
+    .cabecalho {
+        gap: 60%
+    }
+
+    .cabecalho__logo {
+        width: 20%;   
+        margin-left: 5%;
+    }
+
+    .background {
+        margin: 0 0 0 0;
+        text-align: center;
+        position: absolute;
+        opacity: 50%;
+        z-index: -1;
+        width: 180%;
+    
+    }
+
+    .principal {
+        flex-direction: column;
+    }
+
+    
+    .secundario {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        gap: 40px;
+    }
+
+    .secundario__descricao__paragrafo {
+        padding: 0% 10% 0% 10%;
+        font-size: 1.2rem;
+    }
+
+    input {
+        margin-bottom: 1.2rem;
+        width: 50%;
+        height: 2rem;
+        background-color: var(--cor-de-fundo);
+        color: var(--cor-texto-alternativo);
+        font-family: var(--fonte-principal);
+        opacity: 90%;
+        padding-left: 3%;
+        transition: 1s ease;
+        
+    }
+    
+    .labelemail {
+        position: absolute;
+        transform: translate(-160px, 10px);
+        font-size: 0.8rem;
+        pointer-events: none;
+        transition: 1s ease;
+    }
+    
+    input:focus,
+    input:valid {
+        color: var(--cor-principal);
+        border: 5px solid rgb(0, 255, 0);
+        font-size: 0.5rem;
+        
+    }
+    
+    input:focus +.labelemail,
+    input:valid +.labelemail {
+        z-index: 1111;
+        transform: translate(-180px, 8px);
+        padding: 0 12px;
+        font-size: 8px;
+    
+    }
+
+    .container__caixa__email__botao {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .secundario__descricao__titulo, .terciario__descricao__titulo, .quaternario__descricao__titulo {
+        font-size: 25px;
+    }
+
+    .secundario__descricao__paragrafo, .terciario__descricao__paragrafo, .quaternario__descricao__paragrafo {
+        font-size: 16px;
+    }
+
+    
+    .terciario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0% 0% 0% 0%;
+        text-align: center;
+        
+    }
+
+  
+
+    .terciario__descricao__paragrafo {
+        padding: 0% 0% 0% 0%;
+        font-size: 1.2rem;
+        font-family: var(--fonte-principal);
+    }
+
+    .terciario__imagem {
+        width: 50%;
+    }
+
+
+    .quaternario {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .quaternario__descricao__paragrafo {
+        font-size: 1.2rem;
+        font-family: var(--fonte-principal);
+    }
+
+    .quaternario__imagem {
+        width: 30%;
+        margin: 5% 9% 0 0;
+    }
+
+    .rodape__paragrafo {
+        font-size: 0.8em;
+    }
+
+    .rodape__direitos {
+        font-size: 0.6em;
+    }
 }
